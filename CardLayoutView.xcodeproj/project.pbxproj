@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1EA2C11FCF2DB80072324B /* CardLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EA2C01FCF2DB80072324B /* CardLayoutManager.swift */; };
 		8D6C0AEC1FCE996E00F13594 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C0AEA1FCE996E00F13594 /* CardCollectionViewCell.swift */; };
 		8D6C0AED1FCE996E00F13594 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6C0AEB1FCE996E00F13594 /* CardCollectionViewCell.xib */; };
 		8D720B0B1FCC13E300945CF8 /* CardLayoutView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D720B011FCC13E300945CF8 /* CardLayoutView.framework */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D1EA2C01FCF2DB80072324B /* CardLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLayoutManager.swift; sourceTree = "<group>"; };
 		8D6C0AEA1FCE996E00F13594 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D6C0AEB1FCE996E00F13594 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		8D720B011FCC13E300945CF8 /* CardLayoutView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardLayoutView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				8D720B201FCC247900945CF8 /* CardViewDataSource.swift */,
 				8D6C0AEA1FCE996E00F13594 /* CardCollectionViewCell.swift */,
 				8D7DB9A21FCD7F9300B94136 /* CardCollectionViewLayout.swift */,
+				8D1EA2C01FCF2DB80072324B /* CardLayoutManager.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1EA2C11FCF2DB80072324B /* CardLayoutManager.swift in Sources */,
 				8D7DB9A31FCD7F9300B94136 /* CardCollectionViewLayout.swift in Sources */,
 				8D7DB9A61FCD985400B94136 /* CommonUtils.swift in Sources */,
 				8D720B1D1FCC20B000945CF8 /* CardLayoutView.swift in Sources */,

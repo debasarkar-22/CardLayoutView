@@ -9,7 +9,7 @@
 import UIKit
 
 class CardLayoutManager: NSObject {
-    let shared = CardLayoutManager()
+    public static let shared = CardLayoutManager()
     
     var cardLayoutView: CardLayoutView?
     var cardLayoutViewDataSource = CardViewDataSource()

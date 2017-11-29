@@ -34,7 +34,7 @@ public class CardLayoutView: UICollectionView {
     func openCardAtIndexPath(_ indexPath: IndexPath, in collectionView: UICollectionView) {
         indexPathForOpenCard = indexPathForOpenCard != nil ? nil : indexPath
         
-        UIView.animate(withDuration: animationDuration) {
+        UIView.animate(withDuration: CardLayoutManager.shared.animationDuration) {
             collectionView.collectionViewLayout.invalidateLayout()
         }
     }

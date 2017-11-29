@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8D1EA2C11FCF2DB80072324B /* CardLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EA2C01FCF2DB80072324B /* CardLayoutManager.swift */; };
 		8D6C0AEC1FCE996E00F13594 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6C0AEA1FCE996E00F13594 /* CardCollectionViewCell.swift */; };
-		8D6C0AED1FCE996E00F13594 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D6C0AEB1FCE996E00F13594 /* CardCollectionViewCell.xib */; };
 		8D720B0B1FCC13E300945CF8 /* CardLayoutView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D720B011FCC13E300945CF8 /* CardLayoutView.framework */; };
 		8D720B101FCC13E300945CF8 /* CardLayoutViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D720B0F1FCC13E300945CF8 /* CardLayoutViewTests.swift */; };
 		8D720B121FCC13E300945CF8 /* CardLayoutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D720B041FCC13E300945CF8 /* CardLayoutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,8 +31,8 @@
 
 /* Begin PBXFileReference section */
 		8D1EA2C01FCF2DB80072324B /* CardLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardLayoutManager.swift; sourceTree = "<group>"; };
+		8D1EA2C21FCF3B580072324B /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CardCollectionViewCell.xib; path = CardLayoutView/Sources/CardCollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 		8D6C0AEA1FCE996E00F13594 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		8D6C0AEB1FCE996E00F13594 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		8D720B011FCC13E300945CF8 /* CardLayoutView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CardLayoutView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D720B041FCC13E300945CF8 /* CardLayoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardLayoutView.h; sourceTree = "<group>"; };
 		8D720B051FCC13E300945CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +68,7 @@
 		8D6C0AE91FCE993200F13594 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8D6C0AEB1FCE996E00F13594 /* CardCollectionViewCell.xib */,
+				8D1EA2C21FCF3B580072324B /* CardCollectionViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -228,7 +227,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D6C0AED1FCE996E00F13594 /* CardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

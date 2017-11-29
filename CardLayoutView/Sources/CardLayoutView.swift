@@ -13,6 +13,8 @@ public class CardLayoutView: UICollectionView {
     var cardViewDelegate: CardViewDelegate?
     var cardViewDataSource: CardViewDataSource?
     
+    var contentControllers: [UIViewController] = []
+    
     var shadowRadius: CGFloat = 5.0
     var shadowOpacity: CGFloat = 1.0
     var shadowHeight: CGFloat = 2.0
@@ -48,6 +50,7 @@ public class CardLayoutView: UICollectionView {
         cardViewDataSource?.shadowOpacity = shadowOpacity
         cardViewDataSource?.shadowHeight = shadowHeight
         cardViewDataSource?.shadowColor = shadowColor
+        cardViewDataSource?.viewControllers = contentControllers
         
         // Register the cell
         register(UINib(nibName: "CardCollectionViewCell", bundle: nil),  forCellWithReuseIdentifier: "cardCell")

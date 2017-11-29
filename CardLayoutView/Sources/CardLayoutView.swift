@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardLayoutView: UICollectionView {
+public class CardLayoutView: UICollectionView {
     
     var cardViewDelegate: CardViewDelegate?
     var cardViewDataSource: CardViewDataSource?
@@ -36,7 +36,7 @@ class CardLayoutView: UICollectionView {
         setupCollectionView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

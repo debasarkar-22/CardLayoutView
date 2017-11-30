@@ -9,7 +9,6 @@
 import UIKit
 
 public class CardLayoutManager: NSObject {
-    public static let shared = CardLayoutManager()
     
     public var cardLayoutView: CardLayoutView?
     var cardLayoutViewDataSource = CardViewDataSource()
@@ -35,8 +34,10 @@ public class CardLayoutManager: NSObject {
         }
     }
     
-    private override init() {
-        // Singleton instance
+    public init(with frame: CGRect, controllers: [UIViewController]) {
+        super.init()
+        setup(with: frame)
+        contentControllers = controllers
     }
     
     public func setup(with frame: CGRect) {
@@ -49,6 +50,7 @@ public class CardLayoutManager: NSObject {
         
         cardLayoutView = CardLayoutView(frame: frame, collectionViewLayout: cardCollectionViewLayout!)
         cardLayoutView?.backgroundColor = backgroundColor
+        cardLayoutView?.cardLayoutManager = self
         
         cardLayoutView?.delegate = self
         cardLayoutView?.dataSource = self

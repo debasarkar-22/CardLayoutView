@@ -79,6 +79,7 @@ extension CardLayoutManager: UICollectionViewDataSource {
         cell.contentViewController = contentControllers[indexPath.item]
         contentControllers[indexPath.item].view.frame = cell.contentView.bounds
         cell.populateCell()
+        cell.contentView.layer.cornerRadius = 15
         
         return cell
     }

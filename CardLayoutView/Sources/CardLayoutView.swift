@@ -8,7 +8,8 @@
 
 import UIKit
 
-public class CardLayoutView: UICollectionView {
+public class CardLayoutView: UICollectionView, CardStateDelegate {
+    
     var indexPathForOpenCard: IndexPath?
     
     /*
@@ -20,11 +21,16 @@ public class CardLayoutView: UICollectionView {
     */
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
+        (collectionViewLayout as? CardCollectionViewLayout)?.delegate = self
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
+    }
+    
+    func indexPathForOpenCard(in collectionView: UICollectionView) -> IndexPath? {
+        return indexPathForOpenCard
     }
     
     func setupUI() {

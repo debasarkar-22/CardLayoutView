@@ -17,11 +17,16 @@ public class CardLayoutManager: NSObject {
     
     var cardCollectionViewLayout: CardCollectionViewLayout?
     
-    public var shadowRadius: CGFloat = 5.0
+    public var shadowRadius: CGFloat = 8.0
     public var shadowOpacity: CGFloat = 1.0
     public var shadowHeight: CGFloat = 2.0
     public var shadowColor: CGColor = UIColor.lightGray.cgColor
     public var animationDuration: TimeInterval = 0.40
+    
+    public var openCardHeight: CGFloat = 580
+    public var topPadding: CGFloat = 12
+    public var closedCardHeight: CGFloat = 51
+    public var bottomPadding: CGFloat = 16
     
     public var contentControllers: [UIViewController] = [] {
         didSet {
@@ -35,6 +40,12 @@ public class CardLayoutManager: NSObject {
     
     public func setup(with frame: CGRect) {
         cardCollectionViewLayout = CardCollectionViewLayout()
+        
+        cardCollectionViewLayout?.topPadding = topPadding
+        cardCollectionViewLayout?.bottomPadding = bottomPadding
+        cardCollectionViewLayout?.closedCardHeight = closedCardHeight
+        cardCollectionViewLayout?.openCardHeight = openCardHeight
+        
         cardLayoutView = CardLayoutView(frame: frame, collectionViewLayout: cardCollectionViewLayout!)
         
         cardLayoutView?.delegate = self
@@ -77,8 +88,8 @@ extension CardLayoutManager: UICollectionViewDataSource {
         // Populating the content of the card
         cell.contentViewController = contentControllers[indexPath.item]
         contentControllers[indexPath.item].view.frame = cell.contentView.bounds
-        cell.populateCell()
         cell.contentView.layer.cornerRadius = 15
+        cell.populateCell()
         
         return cell
     }

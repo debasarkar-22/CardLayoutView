@@ -25,19 +25,24 @@ class CardCollectionViewLayout: UICollectionViewLayout {
     var xOffSet: CGFloat = 0
     
     var openCardHeight: CGFloat {
-        if CommonUtils.isIphoneX() {
-            return 595
-        } else {
-            switch UIScreen.main.bounds.width {
-            case 320:
-                if CommonUtils.isZoomedMode() {
-                    return 460 // Fix for Zoomed Mode (144428)
+        set {
+            
+        }
+        get {
+            if CommonUtils.isIphoneX() {
+                return 595
+            } else {
+                switch UIScreen.main.bounds.width {
+                case 320:
+                    if CommonUtils.isZoomedMode() {
+                        return 460 // Fix for Zoomed Mode (144428)
+                    }
+                    return 470
+                case 375.0:
+                    return 542
+                default:
+                    return 580
                 }
-                return 470
-            case 375.0:
-                return 542
-            default:
-                return 580
             }
         }
     }
@@ -45,19 +50,24 @@ class CardCollectionViewLayout: UICollectionViewLayout {
     var cardWidth: CGFloat = 275
     var topPadding: CGFloat = 12
     var bottomPadding: CGFloat {
-        if CommonUtils.isIphoneX() {
-            return 30
-        } else {
-            switch UIScreen.main.bounds.width {
-            case 320:
-                if CommonUtils.isZoomedMode() {
-                    return 10.0 // Fix for Zoomed Mode (144428)
+        set {
+            
+        }
+        get {
+            if CommonUtils.isIphoneX() {
+                return 30
+            } else {
+                switch UIScreen.main.bounds.width {
+                case 320:
+                    if CommonUtils.isZoomedMode() {
+                        return 10.0 // Fix for Zoomed Mode (144428)
+                    }
+                    return 8.0
+                case 375.0:
+                    return 16.0
+                default:
+                    return 16.0 // Defect 145114 Fix
                 }
-                return 8.0
-            case 375.0:
-                return 16.0
-            default:
-                return 16.0 // Defect 145114 Fix
             }
         }
     }

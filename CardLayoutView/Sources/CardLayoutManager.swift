@@ -22,6 +22,7 @@ public class CardLayoutManager: NSObject {
     public var shadowHeight: CGFloat = 2.0
     public var shadowColor: CGColor = UIColor.lightGray.cgColor
     public var animationDuration: TimeInterval = 0.40
+    public var backgroundColor: UIColor = .white
     
     public var openCardHeight: CGFloat = 580
     public var topPadding: CGFloat = 12
@@ -47,6 +48,7 @@ public class CardLayoutManager: NSObject {
         cardCollectionViewLayout?.openCardHeight = openCardHeight
         
         cardLayoutView = CardLayoutView(frame: frame, collectionViewLayout: cardCollectionViewLayout!)
+        cardLayoutView?.backgroundColor = backgroundColor
         
         cardLayoutView?.delegate = self
         cardLayoutView?.dataSource = self

@@ -42,7 +42,7 @@ public class CardLayoutManager: NSObject {
         
         
         // Register the cell
-        cardLayoutView?.register(UINib(nibName: "CardCollectionViewCell", bundle: nil),  forCellWithReuseIdentifier: "cardCell")
+        cardLayoutView?.register(UINib(nibName: "CardCollectionViewCell", bundle: Bundle(for: type(of: self))),  forCellWithReuseIdentifier: "cardCell")
         
     }
     

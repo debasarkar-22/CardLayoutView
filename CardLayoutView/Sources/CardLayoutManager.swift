@@ -22,7 +22,6 @@ public class CardLayoutManager: NSObject {
     public var shadowHeight: CGFloat = 2.0
     public var shadowColor: CGColor = UIColor.lightGray.cgColor
     public var animationDuration: TimeInterval = 0.40
-    public var frame: CGRect = .zero
     
     public var contentControllers: [UIViewController] = [] {
         didSet {
@@ -34,7 +33,7 @@ public class CardLayoutManager: NSObject {
         // Singleton instance
     }
     
-    public func setup() {
+    public func setup(with frame: CGRect) {
         cardCollectionViewLayout = CardCollectionViewLayout()
         cardLayoutView = CardLayoutView(frame: frame, collectionViewLayout: cardCollectionViewLayout!)
         
